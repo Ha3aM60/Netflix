@@ -4,6 +4,7 @@ import { AdminLayout } from './layouts/AdminLayout'
 //import {StartPage} from './pages/Start/StartPage';
 import {StartPage} from './pages/Start/StartPage'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {RegisterPage} from './pages/Register/RegisterPage'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/control-panel' element={<AdminLayout></AdminLayout>}></Route>
         <Route path='/' element={<StartPage />} />
+        <Route path='/register' element={<RegisterPage />} />
       </Routes>
 
     </>
