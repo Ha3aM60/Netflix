@@ -5,6 +5,7 @@ import { AdminLayout } from './layouts/AdminLayout'
 import {StartPage} from './pages/Start/StartPage'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {RegisterPage} from './pages/Register/RegisterPage'
+import {LoginPage} from './pages/Login/LoginPage'
 import { AddGenre } from './pages/Admin/AddGenre'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<StartPage />} />
         <Route path='/register' element={<RegisterPage />} />
+        <Route path='/login' element={<LoginPage />} />
         <Route path='/control-panel' element={<AdminLayout></AdminLayout>}>
           <Route path='category'>
             <Route path='addGenre' element={<AddGenre></AddGenre>}></Route>

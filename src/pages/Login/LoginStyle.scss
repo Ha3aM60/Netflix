@@ -1,0 +1,40 @@
+.form{
+    .forgot-password{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 22px;
+        color: #B3B3B3;
+        margin-top: 10px;
+    }
+    .forgot-password:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    .register-text{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #B3B3B3;
+        margin-top: 20px;
+    }
+    .register{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 22px;
+        color: #B3B3B3;
+    }
+    .register:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    svg{
+        position: relative;
+        float: left;
+    }
+}
