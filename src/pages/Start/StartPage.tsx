@@ -1,5 +1,5 @@
 import React from 'react';
-/* import './StartStyle.scss'; */
+import './StartStyle.scss';
 import logo from '../../images/logo.png'
 import img1 from '../../images/homePage_image1.png'
 import img2 from '../../images/homePage_image2.png'
