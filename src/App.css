@@ -7,17 +7,20 @@
 position: absolute;
 width: 575px;
 height: 74px;
-left: 433px;
+left: calc(50% - 575px/2 - 2px);
 top: 158px;
 }
 
+
+
 .head-title .makepayment-title
 {
-position: absolute;
+position: relative;
 width: 264px;
 height: 38px;
-left: calc(50% - 264px/2 + 1px);
 padding-bottom: 10px;
+left: 150px;
+
 
 font-family: 'NAMU';
 font-style: normal;
@@ -44,7 +47,7 @@ line-height: 22px;
 
 text-align: center;
 
-color: #a6a6a6;
+color: #ababab;
 
 }
 .main-outer-form{
