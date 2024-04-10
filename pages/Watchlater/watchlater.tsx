@@ -14,7 +14,7 @@ function watchlater() {
           </div>
           <div className='firstrowfilms'>
               <div className='filmsdiv'>
-                Фільми
+                <p className='actuallname1'>Фільми</p>
               </div>
           </div>
           <div className='arrowbutton1'>
@@ -24,8 +24,8 @@ function watchlater() {
             <img src="./images/godzillaimage.jpg"  className='godzillaimg'/>
           </div>
           <div className='secondrowfilms'>
-              <div className='showsdiv'>
-                Серіали
+              <div className='showsdivsecond'>
+                <p className='showsword'>Серіали</p>  
               </div>
           </div>
       </div>
