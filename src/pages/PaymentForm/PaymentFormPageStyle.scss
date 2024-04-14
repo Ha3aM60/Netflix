@@ -1,0 +1,581 @@
+.paymentFormText {
+
+    .text1 {
+        position: absolute;
+        width: 209px;
+        height: 38px;
+        left: calc(50% - 209px/2 + 1.5px);
+        top: 58px;
+
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    .text2 {
+        position: absolute;
+        width: 575px;
+        height: 22px;
+        left: calc(50% - 575px/2 + 0.5px);
+        top: 110px;
+
+        font-style: normal;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+}
+
+.paymentFormPremium {
+
+    position: absolute;
+    width: 331.59px;
+    height: 442.64px;
+    left: calc(50% - 331.59px/2 - 379.2px);
+    top: calc(40% - 100.14px);
+
+    background: #000000;
+    box-shadow: 0px 0px 22.6796px #5314AD;
+    border-radius: 23.4617px;
+
+    .cap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10.9488px 107.924px;
+        gap: 7.82px;
+
+        position: absolute;
+        width: 331.59px;
+        height: 46.14px;
+        left: 0px;
+        top: 0px;
+
+        background: #5314AD;
+        border-radius: 23.4617px 23.4617px 0px 0px;
+
+        .text-cap {
+            width: 72px;
+            height: 20px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16.6683px;
+            line-height: 20px;
+            color: #FFFFFF;
+            margin-top: 13px;
+        }
+    }
+
+    .price {
+        position: absolute;
+        width: 113px;
+        height: 62px;
+        left: calc(50% - 113px/2 - 14.87px);
+        top: calc(50% - 62px/2 - 137.14px);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 51.6718px;
+        line-height: 62px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .price-svg {
+        position: absolute;
+        left: 63.92%;
+        right: 29.25%;
+        top: 18.55%;
+        bottom: 76.33%;
+    }
+
+    .time {
+        position: absolute;
+        width: 331.59px;
+        height: 18px;
+        left: calc(50% - 331.59px/2);
+        top: 114.96px;
+        font-style: normal;
+        font-weight: 100;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .line {
+        position: absolute;
+        width: 282.32px;
+        height: 1px;
+        left: 25.03px;
+        top: 143.9px;
+        background-color: #1c063b;
+    }
+
+    .text1 {
+        position: absolute;
+        width: 145px;
+        height: 18px;
+        left: 89.43px;
+        top: 158.76px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text2 {
+        position: absolute;
+        width: 168px;
+        height: 18px;
+        left: 81.81px;
+        top: 187.69px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text3 {
+        position: absolute;
+        width: 246px;
+        height: 36px;
+        left: 42.55px;
+        top: 210.37px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text4 {
+        position: absolute;
+        width: 220px;
+        height: 18px;
+        left: 55.9px;
+        top: 261.99px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text5 {
+        position: absolute;
+        width: 166px;
+        height: 18px;
+        left: 82.59px;
+        top: 296.4px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .select {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4.69233px 9.38466px;
+        gap: 7.82px;
+        position: absolute;
+        width: 155.63px;
+        height: 50.05px;
+        left: calc(50% - 155.63px/2 - 0.57px);
+        top: 347.23px;
+        background: #5314AD;
+        border-radius: 6.25644px;
+        transition: 0.3s;
+    }
+
+    .select:hover {
+        background-color: #000000;
+        border: 1px solid #2b0b57;
+    }
+}
+
+.paymentFormStandart {
+    position: absolute;
+    width: 331.59px;
+    height: 442.64px;
+    left: calc(50% - 331.59px/2 - 3.33px);
+    top: calc(40% - 100.14px);
+    background: #000000;
+    box-shadow: 0px 0px 22.6796px #5314AD;
+    border-radius: 23.4617px;
+
+    .cap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10.9488px 107.924px;
+        gap: 7.82px;
+
+        position: absolute;
+        width: 331.59px;
+        height: 46.14px;
+        left: 0px;
+        top: 0px;
+
+        background: #5314AD;
+        border-radius: 23.4617px 23.4617px 0px 0px;
+
+        .text-cap {
+            width: 72px;
+            height: 20px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16.6683px;
+            line-height: 20px;
+            color: #FFFFFF;
+            margin-top: 13px;
+        }
+    }
+
+    .price {
+        position: absolute;
+        width: 113px;
+        height: 62px;
+        left: calc(50% - 113px/2 - 14.87px);
+        top: calc(50% - 62px/2 - 137.14px);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 51.6718px;
+        line-height: 62px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .price-svg {
+        position: absolute;
+        left: 63.92%;
+        right: 29.25%;
+        top: 18.55%;
+        bottom: 76.33%;
+    }
+
+    .time {
+        position: absolute;
+        width: 331.59px;
+        height: 18px;
+        left: calc(50% - 331.59px/2);
+        top: 114.96px;
+        font-style: normal;
+        font-weight: 100;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .line {
+        position: absolute;
+        width: 282.32px;
+        height: 1px;
+        left: 25.03px;
+        top: 143.9px;
+        background-color: #1c063b;
+    }
+
+    .text1 {
+        position: absolute;
+        width: 145px;
+        height: 18px;
+        left: 89.43px;
+        top: 158.76px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text2 {
+        position: absolute;
+        width: 168px;
+        height: 18px;
+        left: 81.81px;
+        top: 187.69px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text3 {
+        position: absolute;
+        width: 246px;
+        height: 36px;
+        left: 42.55px;
+        top: 210.37px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text4 {
+        position: absolute;
+        width: 220px;
+        height: 18px;
+        left: 55.9px;
+        top: 261.99px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text5 {
+        position: absolute;
+        width: 166px;
+        height: 18px;
+        left: 82.59px;
+        top: 296.4px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .select {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4.69233px 9.38466px;
+        gap: 7.82px;
+        position: absolute;
+        width: 155.63px;
+        height: 50.05px;
+        left: calc(50% - 155.63px/2 - 0.57px);
+        top: 347.23px;
+        background: #5314AD;
+        border-radius: 6.25644px;
+        transition: 0.3s;
+    }
+
+    .select:hover {
+        background-color: #000000;
+        border: 1px solid #2b0b57;
+    }
+
+}
+
+.paymentFormBase {
+    position: absolute;
+    width: 331.59px;
+    height: 442.64px;
+    left: calc(50% - 331.59px/2 + 379.2px);
+    top: calc(40% - 100.14px);
+    background: #000000;
+    box-shadow: 0px 0px 22.6796px #5314AD;
+    border-radius: 23.4617px;
+
+    .cap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10.9488px 107.924px;
+        gap: 7.82px;
+
+        position: absolute;
+        width: 331.59px;
+        height: 46.14px;
+        left: 0px;
+        top: 0px;
+
+        background: #5314AD;
+        border-radius: 23.4617px 23.4617px 0px 0px;
+
+        .text-cap {
+            width: 72px;
+            height: 20px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16.6683px;
+            line-height: 20px;
+            color: #FFFFFF;
+            margin-top: 13px;
+        }
+    }
+
+    .price {
+        position: absolute;
+        width: 113px;
+        height: 62px;
+        left: calc(50% - 113px/2 - 14.87px);
+        top: calc(50% - 62px/2 - 137.14px);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 51.6718px;
+        line-height: 62px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .price-svg {
+        position: absolute;
+        left: 63.92%;
+        right: 29.25%;
+        top: 18.55%;
+        bottom: 76.33%;
+    }
+
+    .time {
+        position: absolute;
+        width: 331.59px;
+        height: 18px;
+        left: calc(50% - 331.59px/2);
+        top: 114.96px;
+        font-style: normal;
+        font-weight: 100;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .line {
+        position: absolute;
+        width: 282.32px;
+        height: 1px;
+        left: 25.03px;
+        top: 143.9px;
+        background-color: #1c063b;
+    }
+
+    .text1 {
+        position: absolute;
+        width: 145px;
+        height: 18px;
+        left: 89.43px;
+        top: 158.76px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text2 {
+        position: absolute;
+        width: 168px;
+        height: 18px;
+        left: 81.81px;
+        top: 187.69px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text3 {
+        position: absolute;
+        width: 246px;
+        height: 36px;
+        left: 42.55px;
+        top: 210.37px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text4 {
+        position: absolute;
+        width: 220px;
+        height: 18px;
+        left: 55.9px;
+        top: 261.99px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .text5 {
+        position: absolute;
+        width: 166px;
+        height: 18px;
+        left: 82.59px;
+        top: 296.4px;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15.0015px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .select {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4.69233px 9.38466px;
+        gap: 7.82px;
+        position: absolute;
+        width: 155.63px;
+        height: 50.05px;
+        left: calc(50% - 155.63px/2 - 0.57px);
+        top: 347.23px;
+        background: #5314AD;
+        border-radius: 6.25644px;
+        transition: 0.3s;
+    }
+
+    .select:hover {
+        background-color: #000000;
+        border: 1px solid #2b0b57;
+    }
+}
+
+.paymentForm-text-info {
+    position: absolute;
+    width: 1090px;
+    height: 97px;
+    left: 175px;
+    top: 697px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #b6b6b6;
+}

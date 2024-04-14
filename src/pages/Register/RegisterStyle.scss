@@ -1,27 +1,43 @@
-.text1{
-    font-weight: 350;
-    font-size: 40px;
+.text1 {
+    position: absolute;
+    width: 174px;
+    height: 38px;
+    left: calc(50% - 174px/2 + 1px);
+    top: 108px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
     line-height: 38px;
     text-align: center;
     color: #FFFFFF;
 }
-.text2{
+
+.text2 {
+    position: absolute;
+    width: 575px;
+    height: 22px;
+    left: calc(50% - 575px/2 + 0.5px);
+    top: 160px;
     font-style: normal;
     font-weight: 200;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 22px;
     text-align: center;
     color: #FFFFFF;
-    margin-bottom: 50px;
 }
-.form{
-    height: 450px;
-    width: 650px;
-    border-radius: 30px;
+
+.form {
+    position: absolute;
+    width: 646px;
+    height: 460px;
+    left: calc(50% - 646px/2);
+    top: 235px;
+
     background: #000000;
     box-shadow: 0px 0px 29px #5314AD;
     border-radius: 30px;
-    .text{
+    z-index: 10;
+    .text {
         position: relative;
         font-style: normal;
         font-weight: 350;
@@ -33,7 +49,8 @@
         float: left;
         text-align: left;
     }
-    .text-input{
+
+    .text-input {
         box-sizing: border-box;
         display: flex;
         flex-direction: row;
@@ -51,7 +68,8 @@
         margin: 10px;
         margin-left: 90px;
     }
-    .checkbox-ac{
+
+    .checkbox-ac {
         box-sizing: border-box;
         border: 1px solid #B3B3B3;
         border-radius: 4px;
@@ -72,7 +90,8 @@
         place-content: center;
         cursor: pointer;
     }
-    .checkbox-ac::before{
+
+    .checkbox-ac::before {
         content: "";
         width: 0.65em;
         height: 0.65em;
@@ -83,21 +102,25 @@
         box-shadow: inset 1em 1em var(--form-control-color);
         background-color: white;
     }
-    .checkbox-ac:checked::before{
+
+    .checkbox-ac:checked::before {
         //background-color: #5314AD;
         transform: scale(1);
     }
-    .checkbox-ac:disabled{
+
+    .checkbox-ac:disabled {
         --form-control-color: var(--form-control-disabled);
-        
+
         color: var(--form-control-disabled);
         cursor: not-allowed;
     }
+
     .checkbox-ac:checked {
         background-color: #5314AD;
         border: 0;
     }
-    .text-checkbox{
+
+    .text-checkbox {
         font-style: normal;
         font-weight: 300;
         font-size: 18px;
@@ -109,7 +132,8 @@
         margin-top: 17px;
         text-align: left;
     }
-    .btn{
+
+    .btn {
         width: 485px;
         height: 64px;
         background: #5314AD;
@@ -120,8 +144,30 @@
         margin-left: 90px;
         transition: 0.3s;
     }
-    .btn:hover{
+
+    .btn:hover {
         background-color: transparent;
         border: 1px solid #5314AD;
     }
+}
+
+.line-foneL {
+    position: absolute;
+    width: 213px;
+    height: 279px;
+    left: -27px;
+    top: 255px;
+}
+
+.line-foneR {
+    position: absolute;
+    width: 296px;
+    height: 357px;
+    left: 83%;
+    top: 400.01px;
+    transform: rotate(-5.95deg);
+    z-index: 1;
+}
+body {
+    overflow-x: hidden; 
 }
