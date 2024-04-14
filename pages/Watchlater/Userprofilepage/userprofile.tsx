@@ -8,7 +8,7 @@ const Userprofile = (props) => {
   return (
     <div className="userprofile-container">
       <Helmet>
-        <title>exported project</title>
+        <title>user profile page</title>
       </Helmet>
       <div className="userprofile-userprofile">
         <img
