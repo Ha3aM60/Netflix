@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { IDirectorsItem } from '../../utils/types';
+import { IActorsItem } from '../../utils/types';
 import http from '../../http';
 
-export const ListDirectors = () => {
-    const [allDirectors, setAllDirectors] = useState<IDirectorsItem[]>([]);
-    const [addDirector, addDirectors] = useState<IDirectorsItem>({
+export const ListActors = () => {
+    const [allDirectors, setAllDirectors] = useState<IActorsItem[]>([]);
+    const [addDirector, addDirectors] = useState<IActorsItem>({
         id: 0,
         name: "",
         placeOfBirth: "",
         birthday: "",
+        description: "",
         image: null,
     });
 
@@ -19,13 +20,14 @@ export const ListDirectors = () => {
     const [editingName, setEditingName] = useState<string>('');
     const [editingPlaceOfBirth, setEditingPlaceOfBirth] = useState<string>('');
     const [editingBirthday, setEditingBirthday] = useState<string>('');
+    const [editingDescription, setEditingDescription] = useState<string>('');
 
     useEffect(() => {
         fetchDirectors();
     }, []);
 
     const fetchDirectors = () => {
-        http.get<IDirectorsItem[]>('/directors/index')
+        http.get<IActorsItem[]>('/actors/index')
             .then(resp => {
                 setAllDirectors(resp.data);
             })
@@ -36,17 +38,24 @@ export const ListDirectors = () => {
 
     const handleNewDir = async () => {
         await http
-               .post<IDirectorsItem>("/directors/store", addDirector, {
-                   headers: {
-                       "Content-Type": "multipart/form-data"
-                   }
-               });
-               fetchDirectors();
-            setAddingGenre(false);
+            .post<IActorsItem>("/actors/store", addDirector, {
+                headers: {
+                    "Content-Type": "multipart/form-data"
+                }
+            });
+        fetchDirectors();
+        setAddingGenre(false);
+
+
+        setEditingId(null);
+        setEditingName('');
+        setEditingPlaceOfBirth('');
+        setEditingBirthday('');
+        setEditingDescription('');
     };
 
     const handleDelete = (idD: number) => {
-        http.post(`/directors/delete`, { id: idD })
+        http.post(`/actors/delete`, { id: idD })
             .then(() => {
                 fetchDirectors();
             })
@@ -56,11 +65,12 @@ export const ListDirectors = () => {
     };
 
     const handleSaveChanges = () => {
-        http.post(`/directors/update`, {
+        http.post(`/actors/update`, {
             id: editingId,
             name: editingName,
             placeOfBirth: editingPlaceOfBirth,
-            birthday: editingBirthday
+            birthday: editingBirthday,
+            description: editingDescription
         })
             .then(() => {
 
@@ -70,10 +80,7 @@ export const ListDirectors = () => {
 
                 setError(error);
             });
-        setEditingId(null);
-        setEditingName('');
-        setEditingPlaceOfBirth('');
-        setEditingBirthday('');
+        handleCancelEditing();
     };
 
     const handleImageChange = (e: any) => {
@@ -96,11 +103,12 @@ export const ListDirectors = () => {
         setFullscreenImage(null);
     };
 
-    const handleDoubleClick = (id: number, name: string, placeOfBirth: string, birthday: string) => {
+    const handleDoubleClick = (id: number, name: string, placeOfBirth: string, birthday: string, description: string) => {
         setEditingId(id);
         setEditingName(name);
         setEditingPlaceOfBirth(placeOfBirth);
         setEditingBirthday(birthday);
+        setEditingDescription(description);
     };
 
     const handleCancelEditing = () => {
@@ -108,6 +116,7 @@ export const ListDirectors = () => {
         setEditingName('');
         setEditingPlaceOfBirth('');
         setEditingBirthday('');
+        setEditingDescription('');
     };
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
@@ -134,33 +143,41 @@ export const ListDirectors = () => {
                                 <th scope="col">NAME</th>
                                 <th scope="col">placeOfBirth</th>
                                 <th scope="col">birthday</th>
+                                <th scope="col">Description</th>
                                 <th scope="col">image</th>
                                 <th scope="col">&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {allDirectors.map((item: IDirectorsItem) => (
+                            {allDirectors.map((item: IActorsItem) => (
                                 <tr key={item.id}>
                                     <th scope="row"><a>{item.id}</a></th>
-                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.name, item.placeOfBirth, item.birthday)}>
+                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.name, item.placeOfBirth, item.birthday, item.description)}>
                                         {editingId === item.id ? (
                                             <input type="text" value={editingName} onChange={(e) => setEditingName(e.target.value)} />
                                         ) : (
                                             <span>{item.name}</span>
                                         )}
                                     </td>
-                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.name, item.placeOfBirth, item.birthday)}>
+                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.name, item.placeOfBirth, item.birthday, item.description)}>
                                         {editingId === item.id ? (
                                             <input type="text" value={editingPlaceOfBirth} onChange={(e) => setEditingPlaceOfBirth(e.target.value)} />
                                         ) : (
                                             <span>{item.placeOfBirth}</span>
                                         )}
                                     </td>
-                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.name, item.placeOfBirth, item.birthday)}>
+                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.name, item.placeOfBirth, item.birthday, item.description)}>
                                         {editingId === item.id ? (
                                             <input type="text" value={editingBirthday} onChange={(e) => setEditingBirthday(e.target.value)} />
                                         ) : (
                                             <span>{item.birthday}</span>
+                                        )}
+                                    </td>
+                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.name, item.placeOfBirth, item.birthday, item.description)}>
+                                        {editingId === item.id ? (
+                                            <input type="text" value={editingDescription} onChange={(e) => setEditingDescription(e.target.value)} />
+                                        ) : (
+                                            <span>{item.description}</span>
                                         )}
                                     </td>
                                     <td>
@@ -198,7 +215,10 @@ export const ListDirectors = () => {
                                         <input type="text" value={addDirector.birthday} name='birthday' onChange={handleChange} className="form-control" placeholder="Enter birthday" />
                                     </td>
                                     <td>
-                                        <input type="file" name='birthday'  onChange={(e) => handleImageChange(e)} className="form-control" placeholder="Choose file" />
+                                        <input type="text" value={addDirector.description} name='description' onChange={handleChange} className="form-control" placeholder="Enter description" />
+                                    </td>
+                                    <td>
+                                        <input type="file" name='birthday' onChange={(e) => handleImageChange(e)} className="form-control" placeholder="Choose file" />
                                     </td>
                                     <td>
                                         <button onClick={handleNewDir} className="btn btn-success"><i className="bi bi-check"></i></button>

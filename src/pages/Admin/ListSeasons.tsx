@@ -1,31 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import { IDirectorsItem } from '../../utils/types';
+import {  ISeasonsItem } from '../../utils/types';
 import http from '../../http';
 
-export const ListDirectors = () => {
-    const [allDirectors, setAllDirectors] = useState<IDirectorsItem[]>([]);
-    const [addDirector, addDirectors] = useState<IDirectorsItem>({
+export const ListSeasons = () => {
+    const [allDirectors, setAllDirectors] = useState<ISeasonsItem[]>([]);
+    const [addDirector, addDirectors] = useState<ISeasonsItem>({
         id: 0,
-        name: "",
-        placeOfBirth: "",
-        birthday: "",
-        image: null,
+        year: "",
+        number: 0,
+        serialId: 0,
+        title: ""
     });
 
     const [addingGenre, setAddingGenre] = useState<boolean>(false);
     const [error, setError] = useState<string>('');
-    const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
     const [editingId, setEditingId] = useState<number | null>(null);
-    const [editingName, setEditingName] = useState<string>('');
-    const [editingPlaceOfBirth, setEditingPlaceOfBirth] = useState<string>('');
-    const [editingBirthday, setEditingBirthday] = useState<string>('');
+    const [editinYear, setEditingYear] = useState<string>("");
+    const [editingNumber, setEditingNumber] = useState<number>(0);
+    const [editingSerialId, setEditingSerialId] = useState<number>(0);
+    const [editingTitle, setEditingTitle] = useState<string>('');
 
     useEffect(() => {
         fetchDirectors();
     }, []);
 
     const fetchDirectors = () => {
-        http.get<IDirectorsItem[]>('/directors/index')
+        http.get<ISeasonsItem[]>('/seasons/index')
             .then(resp => {
                 setAllDirectors(resp.data);
             })
@@ -36,17 +36,24 @@ export const ListDirectors = () => {
 
     const handleNewDir = async () => {
         await http
-               .post<IDirectorsItem>("/directors/store", addDirector, {
-                   headers: {
-                       "Content-Type": "multipart/form-data"
-                   }
-               });
-               fetchDirectors();
-            setAddingGenre(false);
+            .post<ISeasonsItem>("/seasons/store", addDirector, {
+                headers: {
+                    "Content-Type": "multipart/form-data"
+                }
+            });
+        fetchDirectors();
+        setAddingGenre(false);
+
+
+        setEditingId(null);
+        setEditingNumber(0);
+        setEditingYear('');
+        setEditingSerialId(0);
+        setEditingTitle('');
     };
 
     const handleDelete = (idD: number) => {
-        http.post(`/directors/delete`, { id: idD })
+        http.post(`/seasons/delete`, { id: idD })
             .then(() => {
                 fetchDirectors();
             })
@@ -56,11 +63,12 @@ export const ListDirectors = () => {
     };
 
     const handleSaveChanges = () => {
-        http.post(`/directors/update`, {
+        http.post(`/seasons/update`, {
             id: editingId,
-            name: editingName,
-            placeOfBirth: editingPlaceOfBirth,
-            birthday: editingBirthday
+            year: editinYear,
+            number: editingNumber,
+            serialId: editingSerialId,
+            title: editingTitle
         })
             .then(() => {
 
@@ -70,44 +78,30 @@ export const ListDirectors = () => {
 
                 setError(error);
             });
-        setEditingId(null);
-        setEditingName('');
-        setEditingPlaceOfBirth('');
-        setEditingBirthday('');
+        handleCancelEditing();
     };
 
-    const handleImageChange = (e: any) => {
-        const file = e.target.files[0];
-        addDirectors(prevState => ({
-            ...prevState,
-            image: file
-        }));
-    };
 
     const handleAddGenre = () => {
         setAddingGenre(true);
     };
 
-    const handleImageClick = (imageUrl: string) => {
-        setFullscreenImage(imageUrl);
-    };
 
-    const closeFullscreenImage = () => {
-        setFullscreenImage(null);
-    };
 
-    const handleDoubleClick = (id: number, name: string, placeOfBirth: string, birthday: string) => {
+    const handleDoubleClick = (id: number, year: string, number: number, serialId: number, title: string) => {
         setEditingId(id);
-        setEditingName(name);
-        setEditingPlaceOfBirth(placeOfBirth);
-        setEditingBirthday(birthday);
+        setEditingNumber(number);
+        setEditingYear(year);
+        setEditingSerialId(serialId);
+        setEditingTitle(title);
     };
 
     const handleCancelEditing = () => {
         setEditingId(null);
-        setEditingName('');
-        setEditingPlaceOfBirth('');
-        setEditingBirthday('');
+        setEditingNumber(0);
+        setEditingYear("");
+        setEditingSerialId(0);
+        setEditingTitle("");
     };
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
@@ -120,56 +114,50 @@ export const ListDirectors = () => {
 
     return (
         <>
-            {fullscreenImage && (
-                <div className="fullscreen-image" onClick={closeFullscreenImage}>
-                    <img src={fullscreenImage} alt="Fullscreen" />
-                </div>
-            )}
             <div className="tm-bg-primary-dark tm-block tm-block-products w-100">
                 <div className="tm-product-table-container">
                     <table className="table table-hover tm-table-small tm-product-table">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>
-                                <th scope="col">NAME</th>
-                                <th scope="col">placeOfBirth</th>
-                                <th scope="col">birthday</th>
-                                <th scope="col">image</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Year</th>
+                                <th scope="col">Serial Id</th>
+                                <th scope="col">Number</th>
                                 <th scope="col">&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {allDirectors.map((item: IDirectorsItem) => (
+                            {allDirectors.map((item: ISeasonsItem) => (
                                 <tr key={item.id}>
                                     <th scope="row"><a>{item.id}</a></th>
-                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.name, item.placeOfBirth, item.birthday)}>
+                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.year, item.number, item.serialId, item.title)}>
                                         {editingId === item.id ? (
-                                            <input type="text" value={editingName} onChange={(e) => setEditingName(e.target.value)} />
+                                            <input type="text" value={editingTitle} onChange={(e) => setEditingTitle(e.target.value)} />
                                         ) : (
-                                            <span>{item.name}</span>
+                                            <span>{item.title}</span>
                                         )}
                                     </td>
-                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.name, item.placeOfBirth, item.birthday)}>
+                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.year, item.number, item.serialId, item.title)}>
                                         {editingId === item.id ? (
-                                            <input type="text" value={editingPlaceOfBirth} onChange={(e) => setEditingPlaceOfBirth(e.target.value)} />
+                                            <input type="text" value={editinYear} onChange={(e) => setEditingYear(e.target.value)} />
                                         ) : (
-                                            <span>{item.placeOfBirth}</span>
+                                            <span>{item.year}</span>
                                         )}
                                     </td>
-                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.name, item.placeOfBirth, item.birthday)}>
+                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.year, item.number, item.serialId, item.title)}>
                                         {editingId === item.id ? (
-                                            <input type="text" value={editingBirthday} onChange={(e) => setEditingBirthday(e.target.value)} />
+                                            <input type="text" value={editingSerialId} onChange={(e) => setEditingSerialId(parseInt(e.target.value, 10))} />
                                         ) : (
-                                            <span>{item.birthday}</span>
+                                            <span>{item.serialId}</span>
                                         )}
                                     </td>
-                                    <td>
-                                        <img
-                                            style={{ width: '50px', cursor: 'pointer' }}
-                                            src={`${"http://127.0.0.1:8000/uploads/" + item.image + ""}`}
-                                            alt=""
-                                            onClick={() => handleImageClick("http://127.0.0.1:8000/uploads/" + item.image)}
-                                        />
+                                    <td className="tm-product-name" onDoubleClick={() => handleDoubleClick(item.id, item.year, item.number, item.serialId, item.title)}>
+                                        {editingId === item.id ? (
+                                            <input type="text" value={editingNumber} onChange={(e) =>setEditingNumber(parseInt(e.target.value, 10))} />
+                                        ) : (
+                                            <span>{item.number}</span>
+                                        )}
                                     </td>
                                     <td>
                                         {editingId === item.id ? (
@@ -189,16 +177,16 @@ export const ListDirectors = () => {
                                 <tr>
                                     <td></td>
                                     <td>
-                                        <input type="text" value={addDirector.name} name='name' onChange={handleChange} className="form-control" placeholder="Enter genre name" />
+                                        <input type="text" value={addDirector.title} name='title' onChange={handleChange} className="form-control" placeholder="Enter title" />
                                     </td>
                                     <td>
-                                        <input type="text" value={addDirector.placeOfBirth} name='placeOfBirth' onChange={handleChange} className="form-control" placeholder="Enter place Of Birth" />
+                                        <input type="text" value={addDirector.year} name='year' onChange={handleChange} className="form-control" placeholder="Enter year" />
                                     </td>
                                     <td>
-                                        <input type="text" value={addDirector.birthday} name='birthday' onChange={handleChange} className="form-control" placeholder="Enter birthday" />
+                                        <input type="text" value={addDirector.serialId} name='serialId' onChange={handleChange} className="form-control" placeholder="Enter serialId" />
                                     </td>
                                     <td>
-                                        <input type="file" name='birthday'  onChange={(e) => handleImageChange(e)} className="form-control" placeholder="Choose file" />
+                                        <input type="text" value={addDirector.number} name='number' onChange={handleChange} className="form-control" placeholder="Enter number" />
                                     </td>
                                     <td>
                                         <button onClick={handleNewDir} className="btn btn-success"><i className="bi bi-check"></i></button>
