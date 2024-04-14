@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import './watchlater.css'
 
-const watchlater = (props) => {
+const watchlater = () => {
   return (
     <div className="watchlater-container">
       <Helmet>
