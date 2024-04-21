@@ -1,0 +1,58 @@
+/* Маєте запитання? Зателефонуйте за номером 0800-509-416 */
+.ques {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #B3B3B3;
+}
+
+.wrapper-footer {
+    background-color: black;
+    position: absolute;
+    top: 3450px;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 1050px;
+}
+
+.footer {
+    width: 1068px;
+    height: 228px;
+    background-color: black;
+    margin-top: 56px;
+    position: absolute; /* Позиционируем абсолютно */
+    bottom: 0;
+
+}
+
+
+.column-wrapper {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.column-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #B3B3B3;
+}
+
+.bottom-text{
+    margin-top: 33px;
+}

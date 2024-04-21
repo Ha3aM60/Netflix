@@ -1,0 +1,76 @@
+.header-pos {
+    margin: 39px 175px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.right-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.exit-button {
+    color: white;
+    text-align: center;
+    background: #5314AD;
+    border-radius: 8px;
+    width: 114px;
+    height: 36px;
+}
+.logo-image{
+    width: 111px;
+    height: 62px;
+}
+.lang-p{
+    color: white;
+}
+
+
+/*//Authorization*/
+
+.authorizationHeaderWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapperLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.textHeaderLinks {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.wrapperProfiles {
+    gap: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.wrapperLikeTime {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.wrapperIcons {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+

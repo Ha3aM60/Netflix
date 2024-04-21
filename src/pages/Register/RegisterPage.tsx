@@ -13,7 +13,7 @@ export const RegisterPage = () => {
           <Form.Label className='text'>Введіть дані:</Form.Label>
         </Row>
         <Row>
-          <input className="text-input" id="exampleFormControlInput1" placeholder="Номер телефону"/>
+          <input className="text-input" id="exampleFormControlInput1" placeholder="Номер телефону або пошта"/>
         </Row>
         <Row>
           <input type='password' className="text-input" id="exampleFormControlInput2" placeholder="Пароль"/>
