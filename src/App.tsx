@@ -4,9 +4,16 @@ import { ListGenre } from './pages/Admin/ListGenre'
 import { StartPage } from './pages/Start/StartPage'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { RegisterPage } from './pages/Register/RegisterPage'
+import { LoginPage } from './pages/Login/LoginPage'
+import { PaymentFormPage } from './pages/PaymentForm/PaymentFormPage'
+import { FavoritPage } from './pages/Favorit/FavoritPage'
+import { PopularFilmsPages } from './pages/PopularFilms/PopularFilmsPages'
+import { PopularSerialsPages } from './pages/PopularSerials/PopularSerialsPages'
+import { PopularCartoonsPages } from './pages/PopularCartoons/PopularCartoonsPages'
+import { PopularAnimesPages } from './pages/PopularAnimes/PopularAnimesPages'
 
 import { ListDirectors } from './pages/Admin/ListDirectors'
-import { RegisterPage } from './pages/Register/RegisterPage'
 import { DefaultLayout } from './layouts/defaultLayouts/DefaultLayout'
 import { ListMovies } from './pages/Admin/ListMovies'
 import { GenreMovies } from './pages/Admin/GenreMovies'
@@ -26,23 +33,32 @@ function App() {
     <>
       <Routes>
         <Route path='/main' element={<DefaultLayout></DefaultLayout>}>
-          <Route path='start' element={<StartPage></StartPage>}></Route>
-          <Route path='register' element={<RegisterPage></RegisterPage>}></Route>
-        </Route>
-        <Route path='/control-panel' element={<AdminLayout></AdminLayout>}>
-          <Route path='listGenre' element={<ListGenre></ListGenre>}></Route>
-          <Route path='listDirectors' element={<ListDirectors></ListDirectors>}></Route>
-          <Route path='ListMovies' element={<ListMovies></ListMovies>}></Route>
-          <Route path='GenreMovies' element={<GenreMovies></GenreMovies>}></Route>
-          <Route path='GenreSerials' element={<GenreSerials></GenreSerials>}></Route>
-          <Route path='listActors' element={<ListActors></ListActors>}></Route>
-          <Route path='listSerials' element={<ListSerials></ListSerials>}></Route>
-          <Route path='listSeasons' element={<ListSeasons></ListSeasons>}></Route>
-          <Route path='listEpisodes' element={<ListEpisodes></ListEpisodes>}></Route>
-          <Route path='ActorsSerials' element={<ActorsSerials></ActorsSerials>}></Route>\
-          <Route path='ActorsMovies' element={<ActorsMovies></ActorsMovies>}></Route>
-        </Route>
-      </Routes>
+        <Route path='start' element={<StartPage></StartPage>}></Route>
+        <Route path='register' element={<RegisterPage></RegisterPage>}></Route>
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/favorit' element={<FavoritPage />} />
+        <Route path='/popular-films' element={<PopularFilmsPages />} />
+        <Route path='/popular-serials' element={<PopularSerialsPages />} />
+        <Route path='/popular-cartoons' element={<PopularCartoonsPages />} />
+        <Route path='/popular-animes' element={<PopularAnimesPages />} />
+
+        <Route path='/payment-form' element={<PaymentFormPage />} />
+
+      </Route>
+      <Route path='/control-panel' element={<AdminLayout></AdminLayout>}>
+        <Route path='listGenre' element={<ListGenre></ListGenre>}></Route>
+        <Route path='listDirectors' element={<ListDirectors></ListDirectors>}></Route>
+        <Route path='ListMovies' element={<ListMovies></ListMovies>}></Route>
+        <Route path='GenreMovies' element={<GenreMovies></GenreMovies>}></Route>
+        <Route path='GenreSerials' element={<GenreSerials></GenreSerials>}></Route>
+        <Route path='listActors' element={<ListActors></ListActors>}></Route>
+        <Route path='listSerials' element={<ListSerials></ListSerials>}></Route>
+        <Route path='listSeasons' element={<ListSeasons></ListSeasons>}></Route>
+        <Route path='listEpisodes' element={<ListEpisodes></ListEpisodes>}></Route>
+        <Route path='ActorsSerials' element={<ActorsSerials></ActorsSerials>}></Route>\
+        <Route path='ActorsMovies' element={<ActorsMovies></ActorsMovies>}></Route>
+      </Route>
+    </Routes>
 
     </>
   )

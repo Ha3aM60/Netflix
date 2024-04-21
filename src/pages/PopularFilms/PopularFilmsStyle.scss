@@ -1,0 +1,123 @@
+.popular-text {
+    position: absolute;
+    left: calc(50% - 294px/2 + 1px);
+    top: 60px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 38px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.popular-films {
+    margin-top: 50px;
+}
+
+.row-film {
+    width: 1350px;
+}
+
+.popular-film {
+    margin-left: 100px;
+
+    .row-film {
+        margin-bottom: 35px;
+        width: 1150px;
+    }
+}
+
+.row-films {
+    margin-top: 120px;
+
+    .name-text {
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 34px;
+        color: #FFFFFF;
+        margin-left: 105px;
+        margin-bottom: 40px;
+    }
+
+    .click-left {
+        position: relative;
+
+        width: 100px;
+        height: 100px;
+        top: 70px;
+    }
+
+    .click-right {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        top: 70px;
+    }
+
+    .img-poster {
+        box-sizing: border-box;
+        width: 205px;
+        height: 255px;
+        border: 1px solid #B3B3B3;
+        border-radius: 30px;
+    }
+}
+
+.choice-of-genre {
+    width: 1140px;
+    margin-left: 100px;
+
+    .genre-text {
+        color: #FFFFFF;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    .genre-btn {
+        width: 202px;
+        height: 71px;
+        left: 175px;
+        top: 933px;
+        background: #5314AD;
+        border-radius: 8px;
+        margin-top: 20px;
+
+        .genre-btn-text {
+            height: 24px;
+            font-weight: 500;
+            font-size: 20px;
+            color: #FFFFFF;
+            margin: 20px;
+        }
+    }
+}
+
+.form-selct {
+    /* genre button */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 23px;
+    gap: 165px;
+
+    position: absolute;
+    width: 330px;
+    height: 48px;
+    left: 557px;
+    top: 1040px;
+
+    background: #000000;
+    border: 1px solid #B3B3B3;
+    border-radius: 4px;
+
+}
