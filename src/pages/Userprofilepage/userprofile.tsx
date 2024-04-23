@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import './userprofile.css'
 
-const Userprofile = (props) => {
+const Userprofile = () => {
   return (
     <div className="userprofile-container">
       <Helmet>
