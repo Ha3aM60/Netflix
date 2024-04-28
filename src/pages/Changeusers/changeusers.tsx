@@ -18,35 +18,6 @@ const Userchange = () => {
             <div className="userchange-group1"></div>
           </div>
         </div>
-        <button className="userchange-buttonlogin">
-          <div className="userchange-frame4">
-            <span className="userchange-text">
-              <span>Увійти</span>
-            </span>
-          </div>
-        </button>
-        <img
-          src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/46149e4d-06d9-4ee0-aa4d-970f93959f61/1fffcdc0-63b3-40ac-b42e-d6ddf7576c2d?org_if_sml=15977&amp;force_format=original"
-          alt="logo7336"
-          className="userchange-logo"
-        />
-        <div className="userchange-language">
-          <div className="userchange-uaeng">
-            <span className="userchange-text02">
-              <span>UA</span>
-            </span>
-          </div>
-          <div className="userchange-uaeng1">
-            <span className="userchange-text04">
-              <span>ENG</span>
-            </span>
-          </div>
-          <img
-            src="/external/line27336-a225.svg"
-            alt="Line27336"
-            className="userchange-line2"
-          />
-        </div>
         <img
           src="/external/line47336-7et.svg"
           alt="Line47336"
@@ -74,92 +45,7 @@ const Userchange = () => {
         <span className="userchange-text14">
           <span>User 2</span>
         </span>
-        <div className="userchange-footer">
-          <span className="userchange-text16">
-            <span className="userchange-text17">
-              Маєте запитання? Зателефонуйте за номером 
-            </span>
-            <span>0800-509-416</span>
-          </span>
-          <span className="userchange-text19">
-            <span>FlexWatch Україна</span>
-          </span>
-          <button className="userchange-ga2button">
-            <span className="userchange-text21">
-              <span>Поширені запитання</span>
-            </span>
-          </button>
-          <div className="userchange-component15">
-            <span className="userchange-text23">
-              <span>Довідковий центр</span>
-            </span>
-          </div>
-          <div className="userchange-component19">
-            <span className="userchange-text25">
-              <span>Обліковий запис</span>
-            </span>
-          </div>
-          <div className="userchange-component23">
-            <span className="userchange-text27">
-              <span>Медіацентр</span>
-            </span>
-          </div>
-          <div className="userchange-component12">
-            <span className="userchange-text29">
-              <span>Зв’язки з інвесторами</span>
-            </span>
-          </div>
-          <div className="userchange-component16">
-            <span className="userchange-text31">
-              <span>Вакансії</span>
-            </span>
-          </div>
-          <div className="userchange-component20">
-            <span className="userchange-text33">
-              <span>Способи перегляду</span>
-            </span>
-          </div>
-          <div className="userchange-component24">
-            <span className="userchange-text35">
-              <span>Умови використання</span>
-            </span>
-          </div>
-          <div className="userchange-component13">
-            <span className="userchange-text37">
-              <span>Конфіденційність</span>
-            </span>
-          </div>
-          <div className="userchange-component17">
-            <span className="userchange-text39">
-              <span>Налаштування файлів cookie</span>
-            </span>
-          </div>
-          <div className="userchange-component21">
-            <span className="userchange-text41">
-              <span>Корпоративна інформація</span>
-            </span>
-          </div>
-          <div className="userchange-component25">
-            <span className="userchange-text43">
-              <span>Зв’язатися з нами</span>
-            </span>
-          </div>
-          <div className="userchange-component14">
-            <span className="userchange-text45">
-              <span>Перевірка швидкості</span>
-            </span>
-          </div>
-          <div className="userchange-component18">
-            <span className="userchange-text47">
-              <span>Юридичні повідомлення</span>
-            </span>
-          </div>
-          <div className="userchange-component22">
-            <span className="userchange-text49">
-              <span>Тільки на Netflix</span>
-            </span>
-          </div>
-        </div>
+        
         <img
           src="/external/curve17337-t2ai.svg"
           alt="curve17337"
