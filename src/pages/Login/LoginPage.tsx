@@ -1,4 +1,3 @@
-import React from 'react';
 import './LoginStyle.scss';
 import { Container, Form, Row } from 'react-bootstrap';
 

@@ -47,6 +47,7 @@ export interface IGenreMovies {
     moviesId: string;
     genre_name: string;
     movie_title: string;
+    image: string;
 }
 export interface IGenreSerials {
     id: number;
@@ -54,6 +55,7 @@ export interface IGenreSerials {
     serialsId: string;
     genre_name: string;
     serial_title: string;
+    image: string;
 }
 export interface ISeasonsItem {
     id: number;

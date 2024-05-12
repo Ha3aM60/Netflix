@@ -33,32 +33,32 @@ function App() {
     <>
       <Routes>
         <Route path='/main' element={<DefaultLayout></DefaultLayout>}>
-        <Route path='start' element={<StartPage></StartPage>}></Route>
-        <Route path='register' element={<RegisterPage></RegisterPage>}></Route>
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/favorit' element={<FavoritPage />} />
-        <Route path='/popular-films' element={<PopularFilmsPages />} />
-        <Route path='/popular-serials' element={<PopularSerialsPages />} />
-        <Route path='/popular-cartoons' element={<PopularCartoonsPages />} />
-        <Route path='/popular-animes' element={<PopularAnimesPages />} />
+          <Route path='start' element={<StartPage></StartPage>}></Route>
+          <Route path='register' element={<RegisterPage></RegisterPage>}></Route>
+          <Route path='login' element={<LoginPage></LoginPage>} ></Route>
+          <Route path='favorit' element={<FavoritPage></FavoritPage>} ></Route>
+          <Route path='popular-films' element={<PopularFilmsPages></PopularFilmsPages>} ></Route>
+          <Route path='popular-serials' element={<PopularSerialsPages></PopularSerialsPages>} ></Route>
+          <Route path='popular-cartoons' element={<PopularCartoonsPages></PopularCartoonsPages>} ></Route>
+          <Route path='popular-animes' element={<PopularAnimesPages></PopularAnimesPages>} ></Route>
+          <Route path='payment-form' element={<PaymentFormPage></PaymentFormPage>} ></Route>
 
-        <Route path='/payment-form' element={<PaymentFormPage />} />
 
-      </Route>
-      <Route path='/control-panel' element={<AdminLayout></AdminLayout>}>
-        <Route path='listGenre' element={<ListGenre></ListGenre>}></Route>
-        <Route path='listDirectors' element={<ListDirectors></ListDirectors>}></Route>
-        <Route path='ListMovies' element={<ListMovies></ListMovies>}></Route>
-        <Route path='GenreMovies' element={<GenreMovies></GenreMovies>}></Route>
-        <Route path='GenreSerials' element={<GenreSerials></GenreSerials>}></Route>
-        <Route path='listActors' element={<ListActors></ListActors>}></Route>
-        <Route path='listSerials' element={<ListSerials></ListSerials>}></Route>
-        <Route path='listSeasons' element={<ListSeasons></ListSeasons>}></Route>
-        <Route path='listEpisodes' element={<ListEpisodes></ListEpisodes>}></Route>
-        <Route path='ActorsSerials' element={<ActorsSerials></ActorsSerials>}></Route>\
-        <Route path='ActorsMovies' element={<ActorsMovies></ActorsMovies>}></Route>
-      </Route>
-    </Routes>
+        </Route>
+        <Route path='/control-panel' element={<AdminLayout></AdminLayout>}>
+          <Route path='listGenre' element={<ListGenre></ListGenre>}></Route>
+          <Route path='listDirectors' element={<ListDirectors></ListDirectors>}></Route>
+          <Route path='ListMovies' element={<ListMovies></ListMovies>}></Route>
+          <Route path='GenreMovies' element={<GenreMovies></GenreMovies>}></Route>
+          <Route path='GenreSerials' element={<GenreSerials></GenreSerials>}></Route>
+          <Route path='listActors' element={<ListActors></ListActors>}></Route>
+          <Route path='listSerials' element={<ListSerials></ListSerials>}></Route>
+          <Route path='listSeasons' element={<ListSeasons></ListSeasons>}></Route>
+          <Route path='listEpisodes' element={<ListEpisodes></ListEpisodes>}></Route>
+          <Route path='ActorsSerials' element={<ActorsSerials></ActorsSerials>}></Route>
+          <Route path='ActorsMovies' element={<ActorsMovies></ActorsMovies>}></Route>
+        </Route>
+      </Routes>
 
     </>
   )

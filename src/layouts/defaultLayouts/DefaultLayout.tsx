@@ -1,28 +1,17 @@
-import {Outlet, useLocation} from 'react-router-dom';
-import { MainHeader } from '../../components/headers/MainHeader.tsx';
+import {Outlet} from 'react-router-dom';
 import { Footer } from '../../components/Footer';
 import {AuthorizationHeader} from "../../components/headers/AuthorizationHeader.tsx";
-
-const renderHeader = ({location}:{location:string})=> {
-    switch (location){
-        case '':
-            return <MainHeader/>;
-        case '1':
-            return <MainHeader/>;
-        default:
-            return <MainHeader/>;
-    }
-}
+import {useSelector} from "react-redux";
+import {RootState} from "../../app/store.ts";
+import {MainHeader} from "../../components/headers/MainHeader.tsx";
 
 export const DefaultLayout = () => {
-    const location = useLocation();
-    const { pathname } = location;
-    console.log('location', pathname);
+    const auth = useSelector((state: RootState) => state.users.isAuth);
 
     return (
         <>
             <div style={{ position: 'relative' }}>
-                <AuthorizationHeader/>
+                {auth ?  <AuthorizationHeader/> : <MainHeader/>}
                 <Outlet></Outlet>
                 <Footer></Footer>
             </div>
