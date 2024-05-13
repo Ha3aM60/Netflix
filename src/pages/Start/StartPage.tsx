@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 
 export const StartPage = () => {
   return (
-    <Container>
+    <Container className='start-page-block'>
       <div className="block1">
         <div className="language">
           <Form.Label className='lang'><a href='/ua'>UA</a></Form.Label> <Form.Label className='lang'> | </Form.Label> <Form.Label className='lang'><a href='/eng'> ENG </a></Form.Label>
@@ -39,8 +39,8 @@ export const StartPage = () => {
       </div>
       <div className='block2'>
         <div className='linear1'></div>
-        <div className='linear2'></div>
-        <div className='linear3'></div>
+        {/* <div className='linear2'></div>
+        <div className='linear3'></div> */}
         <div className="text-block1">
           <Form.Label className='text1'>Дивіться на телевізорі</Form.Label>
           <Form.Label className='text2'>Дивіться на Smart TV, Playstation, Xbox, Chromecast<br></br> Apple TV, Blu-ray-g програвачах тощо.</Form.Label>

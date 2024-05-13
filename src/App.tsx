@@ -12,6 +12,7 @@ import { PopularFilmsPages } from './pages/PopularFilms/PopularFilmsPages'
 import { PopularSerialsPages } from './pages/PopularSerials/PopularSerialsPages'
 import { PopularCartoonsPages } from './pages/PopularCartoons/PopularCartoonsPages'
 import { PopularAnimesPages } from './pages/PopularAnimes/PopularAnimesPages'
+import { FilmPage } from './pages/FilmPages/FilmPage'
 
 import { ListDirectors } from './pages/Admin/ListDirectors'
 import { DefaultLayout } from './layouts/defaultLayouts/DefaultLayout'
@@ -32,8 +33,9 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path='/' element={<StartPage></StartPage>}></Route>
+
         <Route path='/main' element={<DefaultLayout></DefaultLayout>}>
-          <Route path='start' element={<StartPage></StartPage>}></Route>
           <Route path='register' element={<RegisterPage></RegisterPage>}></Route>
           <Route path='login' element={<LoginPage></LoginPage>} ></Route>
           <Route path='favorit' element={<FavoritPage></FavoritPage>} ></Route>
@@ -42,7 +44,7 @@ function App() {
           <Route path='popular-cartoons' element={<PopularCartoonsPages></PopularCartoonsPages>} ></Route>
           <Route path='popular-animes' element={<PopularAnimesPages></PopularAnimesPages>} ></Route>
           <Route path='payment-form' element={<PaymentFormPage></PaymentFormPage>} ></Route>
-
+          <Route path='film' element={<FilmPage />} />
 
         </Route>
         <Route path='/control-panel' element={<AdminLayout></AdminLayout>}>

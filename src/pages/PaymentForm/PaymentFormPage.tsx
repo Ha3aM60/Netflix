@@ -3,7 +3,7 @@ import './PaymentFormPageStyle.scss';
 
 export const PaymentFormPage = () => {
   return (
-    <Container>
+    <Container className='paymentFormPage'>
       <div className="paymentFormText">
         <Form.Label className="text1">Оберіть план</Form.Label>
         <Form.Label className="text2">Оберіть комфортний Вам план.</Form.Label>
