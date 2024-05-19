@@ -80,7 +80,7 @@ export const PopularFilmsPages = () => {
 
 
 
-        <Container>
+        <Container >
             <Form.Label className="popular-text">Популярні фільми</Form.Label>
             <Row className='popular-films'>
                 <div className="row-films">

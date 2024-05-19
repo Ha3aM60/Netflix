@@ -31,7 +31,7 @@ export const AuthorizationHeader = () => {
             <div className="header-pos">
                 <div className={'authorizationHeaderWrapper'}>
                     <div className={'wrapperLinks'}>
-                        <Link to={''}><img src={Logo} className='logo-image' alt={'logo'} /></Link>
+                        <Link to={'/main/popular-more'}><img src={Logo} className='logo-image' alt={'logo'} /></Link>
                         <Link to={'/main/popular-films'} className="nav-link"><a className={'textHeaderLinks'}>Фільми</a></Link>
                         <Link to={'/main/popular-serials'} className="nav-link"><a className={'textHeaderLinks'}>Серіали</a></Link>
                         <Link to={'/main/popular-animes'} className="nav-link"><a className={'textHeaderLinks'}>Аніме</a></Link>

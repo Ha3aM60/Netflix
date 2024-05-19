@@ -13,6 +13,7 @@ import { PopularSerialsPages } from './pages/PopularSerials/PopularSerialsPages'
 import { PopularCartoonsPages } from './pages/PopularCartoons/PopularCartoonsPages'
 import { PopularAnimesPages } from './pages/PopularAnimes/PopularAnimesPages'
 import { FilmPage } from './pages/FilmPages/FilmPage'
+import { PopularMorePage } from './pages/PopularMore/PopularMorePage'
 
 import { ListDirectors } from './pages/Admin/ListDirectors'
 import { DefaultLayout } from './layouts/defaultLayouts/DefaultLayout'
@@ -45,6 +46,7 @@ function App() {
           <Route path='popular-animes' element={<PopularAnimesPages></PopularAnimesPages>} ></Route>
           <Route path='payment-form' element={<PaymentFormPage></PaymentFormPage>} ></Route>
           <Route path='film' element={<FilmPage />} />
+          <Route path='popular-more' element={<PopularMorePage></PopularMorePage>} ></Route>
 
         </Route>
         <Route path='/control-panel' element={<AdminLayout></AdminLayout>}>

@@ -109,11 +109,6 @@ export const PopularMorePage = () => {
                     </div>
                 </div>
                 <div className="row-films">
-                    <select className='form-selct'>
-                        <option selected>Оберіть жанр</option>
-                    </select>
-                </div>
-                <div className="row-films">
                     <Row>
                         <Form.Label className="name-text">Нові релізи</Form.Label>
                     </Row>
