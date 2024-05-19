@@ -81,12 +81,11 @@ export const PopularFilmsPages = () => {
         ref.current.scrollIntoView({ behavior: 'smooth' });
     };
 
-
     return (
 
 
 
-        <Container>
+        <Container >
             <Form.Label className="popular-text">Популярні фільми</Form.Label>
             <Row className='popular-films'>
                 <div className="row-films">

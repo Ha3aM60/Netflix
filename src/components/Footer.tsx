@@ -4,6 +4,7 @@ export const Footer = () => {
     return (
         <>
             <div className="wrapper-footer">
+                <div className="line"></div>
                 <div className='footer'>
                     <p className='ques'>Маєте запитання? Зателефонуйте за номером 0800-509-416</p>
 

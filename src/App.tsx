@@ -13,6 +13,7 @@ import { PopularSerialsPages } from './pages/PopularSerials/PopularSerialsPages'
 import { PopularCartoonsPages } from './pages/PopularCartoons/PopularCartoonsPages'
 import { PopularAnimesPages } from './pages/PopularAnimes/PopularAnimesPages'
 import { FilmPage } from './pages/FilmPages/FilmPage'
+import { PopularMorePage } from './pages/PopularMore/PopularMorePage'
 
 import { ListDirectors } from './pages/Admin/ListDirectors'
 import { DefaultLayout } from './layouts/defaultLayouts/DefaultLayout'
