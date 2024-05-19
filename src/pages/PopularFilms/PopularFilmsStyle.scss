@@ -3,6 +3,7 @@
     left: calc(50% - 294px/2 + 1px);
     top: 60px;
     font-style: normal;
+    font-family: 'NAMU';
     font-weight: 400;
     font-size: 40px;
     line-height: 38px;
@@ -12,6 +13,7 @@
 
 .popular-films {
     margin-top: 50px;
+    
 }
 
 .row-film {
@@ -20,7 +22,7 @@
 
 .popular-film {
     margin-left: 100px;
-   
+   font-family: 'NAMU';
 
     .row-film {
         margin-bottom: 35px;
@@ -34,6 +36,7 @@
     .name-text {
         color: #FFFFFF;
         font-style: normal;
+        font-family: 'NAMU';
         font-weight: 400;
         font-size: 35px;
         line-height: 34px;
@@ -78,6 +81,7 @@
         line-height: 34px;
         color: #FFFFFF;
         text-align: center;
+        font-family: 'NAMU';
     }
 
     .genre-btn {

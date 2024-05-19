@@ -303,7 +303,8 @@
 
             .text2 {
                 position: relative;
-                top: 120px;
+                top: 10px;
+                left: -34px;
                 float: left;
                 font-style: normal;
                 font-weight: 300;
@@ -343,7 +344,8 @@
                 font-size: 19px;
                 text-align: left;
                 color: #FFFFFF;
-                top: 155px;
+                top: 10px;
+                left: -34px;
             }
 
         }
@@ -378,7 +380,8 @@
                 font-size: 19px;
                 text-align: left;
                 color: #FFFFFF;
-                top: 120px;
+                top: 10px;
+                left: -34px;
             }
 
         }
@@ -412,6 +415,8 @@
                 font-size: 19px;
                 text-align: left;
                 color: #FFFFFF;
+                top: 10px;
+                left: -34px;
             }
         }
 
@@ -550,5 +555,9 @@
             font-size: 20px;
             top: 3080px;
         }
+    }
+    .wrapper-footer{
+        position: relative;
+        top: 3150px;
     }
 }
