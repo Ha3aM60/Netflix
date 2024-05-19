@@ -1,6 +1,7 @@
 .paymentFormPage {
     position: relative;
     top: 200px;
+    height: 700px;
     .paymentFormText {
         position: relative;
         top: -220px;
@@ -45,7 +46,7 @@
         width: 331.59px;
         height: 442.64px;
         left: calc(50% - 331.59px/2 - 379.2px);
-        top: calc(40% - 100.14px);
+        top: -90px;
 
         background: #000000;
         box-shadow: 0px 0px 22.6796px #5314AD;
@@ -225,7 +226,7 @@
         width: 331.59px;
         height: 442.64px;
         left: calc(50% - 331.59px/2 - 3.33px);
-        top: calc(40% - 100.14px);
+        top: -90px;
         background: #000000;
         box-shadow: 0px 0px 22.6796px #5314AD;
         border-radius: 23.4617px;
@@ -405,7 +406,7 @@
         width: 331.59px;
         height: 442.64px;
         left: calc(50% - 331.59px/2 + 379.2px);
-        top: calc(40% - 100.14px);
+        top: -90px;
         background: #000000;
         box-shadow: 0px 0px 22.6796px #5314AD;
         border-radius: 23.4617px;

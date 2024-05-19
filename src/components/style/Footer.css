@@ -11,22 +11,29 @@
 }
 
 .wrapper-footer {
+    position: relative;
     background-color: black;
-    position: absolute;
-    top: 3450px;
     z-index: 2;
     left: 50%;
     transform: translate(-50%, 0%);
     width: 1050px;
+    
 }
-
+.line{
+    position: relative;
+    height: 1px;
+    width: 1300px;
+    background-color: #969696;
+    left: -12%;
+}
 .footer {
+    position: relative;
     width: 1068px;
     height: 228px;
     background-color: black;
     margin-top: 56px;
-    position: absolute; /* Позиционируем абсолютно */
     bottom: 0;
+    top: 0px;
 
 }
 

@@ -7,7 +7,7 @@ import http from '../../http';
 export const PopularSerialsPages = () => {
 
     const [comedyMovies, setComedyMovies] = useState<IGenreSerials[]>([]);
-
+    console.log(comedyMovies);
     const [genreComedy, setComedyGenre] = useState<IGenreSerials[]>([]);
     const [genreFentezi, setFenteziGenre] = useState<IGenreSerials[]>([]);
     const [genretriler, setTrilerGenre] = useState<IGenreSerials[]>([]);

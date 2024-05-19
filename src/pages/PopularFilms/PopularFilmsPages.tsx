@@ -24,8 +24,6 @@ export const PopularFilmsPages = () => {
     const [popularIdx1, setStartIdx6] = useState(5);
 
     const [error, setError] = useState<string>('');
-
-
     useEffect(() => {
         fetchGenreMovies();
     }, []);
@@ -77,7 +75,6 @@ export const PopularFilmsPages = () => {
     const scrollToElement = (ref: any) => {
         ref.current.scrollIntoView({ behavior: 'smooth' });
     };
-
 
     return (
 
