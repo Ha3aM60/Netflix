@@ -44,7 +44,7 @@ function App() {
           <Route path='popular-cartoons' element={<PopularCartoonsPages></PopularCartoonsPages>} ></Route>
           <Route path='popular-animes' element={<PopularAnimesPages></PopularAnimesPages>} ></Route>
           <Route path='payment-form' element={<PaymentFormPage></PaymentFormPage>} ></Route>
-          <Route path='film' element={<FilmPage />} />
+          <Route path='film/:id' element={<FilmPage />} />
 
         </Route>
         <Route path='/control-panel' element={<AdminLayout></AdminLayout>}>

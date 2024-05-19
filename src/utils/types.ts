@@ -28,6 +28,7 @@ export interface IMoviesItem {
     year: string;
     country: string;
     image: File | null;
+    video: File | null;
 }
 export interface ISerialsItem {
     id: number;

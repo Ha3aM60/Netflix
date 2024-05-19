@@ -9,6 +9,7 @@ import { store } from "./app/store.ts";
 import {IUserLogin} from "./redux/types.ts";
 import {auth} from "./redux/userSlice.ts";
 
+
 const token = localStorage.getItem("authToken");
 if (typeof token === "string") {
     const decoded = jwtDecode<IUserLogin>(token);

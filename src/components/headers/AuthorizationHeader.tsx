@@ -52,7 +52,7 @@ export const AuthorizationHeader = () => {
                             />
                             <div className='centerHeaderContainer'>
                                 <div onClick={() => handleFind(find)} ><Search /></div>
-                                <p className='lang-p' style={{ margin: "0px 14px 0px 29px" }}>UA | ENG</p>
+                                <p className='lang-p' style={{ margin: "0px 14px 0px 29px" }}></p>
                                 <Account />
                             </div>
                         </div>

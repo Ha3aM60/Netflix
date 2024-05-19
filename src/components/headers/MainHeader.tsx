@@ -8,7 +8,6 @@ export const MainHeader = () => {
         <img src={Logo} className='logo-image'></img>
         <div className="right-wrapper">
           
-          <p className='lang-p'>UA | ENG</p>
           <button className='exit-button'>Увійти</button></div>
       </div>
     </>

@@ -3,6 +3,7 @@ import './PopularFilmsStyle.scss';
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import { IGenreMovies, IMoviesItem } from '../../utils/types';
 import http from '../../http';
+import { useNavigate } from 'react-router-dom';
 
 
 export const PopularFilmsPages = () => {
@@ -24,6 +25,8 @@ export const PopularFilmsPages = () => {
     const [popularIdx1, setStartIdx6] = useState(5);
 
     const [error, setError] = useState<string>('');
+
+    const nav = useNavigate();
 
 
     useEffect(() => {
@@ -90,14 +93,14 @@ export const PopularFilmsPages = () => {
                     <div className="popular-film">
                         <Row className="row-film">
                             {comedyMovies.slice(popularIdx, popularIdx + 5).map((movie, index) => (
-                                <Col key={index}>
+                                <Col onClick={() => {nav("/main/film/"+movie.moviesId)}} key={index}>
                                     <img src={`http://127.0.0.1:8000/uploads/${movie.image}`} className="img-poster" />
                                 </Col>
                             ))}
                         </Row>
                         <Row className="row-film">
                             {comedyMovies.slice(popularIdx1, popularIdx1 + 5).map((movie, index) => (
-                                <Col key={index}>
+                                <Col onClick={() => {nav("/main/film/"+movie.moviesId)}} key={index}>
                                     <img src={`http://127.0.0.1:8000/uploads/${movie.image}`} className="img-poster" />
                                 </Col>
                             ))}
@@ -210,7 +213,7 @@ export const PopularFilmsPages = () => {
                             </defs>
                         </svg>
                         {genreAction.slice(fenteziIdx, fenteziIdx + 5).map((movie, index) => (
-                            <Col key={index}>
+                            <Col onClick={() => {nav("/main/film/"+movie.moviesId)}} key={index}>
                                 <img src={`http://127.0.0.1:8000/uploads/${movie.image}`} className="img-poster" />
                             </Col>
                         ))}
@@ -254,7 +257,7 @@ export const PopularFilmsPages = () => {
                         </svg>
                         {genretriler.slice(trilerIdx, trilerIdx + 5).map((movie, index) => (
 
-                            <Col key={index}>
+                            <Col onClick={() => {nav("/main/film/"+movie.moviesId)}} key={index}>
                                 <img src={`http://127.0.0.1:8000/uploads/${movie.image}`} className="img-poster" />
                             </Col>
 
@@ -299,7 +302,7 @@ export const PopularFilmsPages = () => {
                         </svg>
                         {genreComedy.slice(detIdx, detIdx + 5).map((movie, index) => (
 
-                            <Col key={index}>
+                            <Col onClick={() => {nav("/main/film/"+movie.moviesId)}} key={index}>
                                 <img src={`http://127.0.0.1:8000/uploads/${movie.image}`} className="img-poster" />
                             </Col>
 
@@ -343,7 +346,7 @@ export const PopularFilmsPages = () => {
                             </svg>
                             {genreDetekt.slice(comedyIdx, comedyIdx + 5).map((movie, index) => (
 
-                                <Col key={index}>
+                                <Col onClick={() => {nav("/main/film/"+movie.moviesId)}} key={index}>
                                     <img src={`http://127.0.0.1:8000/uploads/${movie.image}`}
                                         className="img-poster" />
                                 </Col>
@@ -388,7 +391,7 @@ export const PopularFilmsPages = () => {
                                 </defs>
                             </svg>
                             {genreFentezi.slice(actionIdx, actionIdx + 5).map((movie, index) => (
-                                <Col key={index}>
+                                <Col onClick={() => {nav("/main/film/"+movie.moviesId)}} key={index}>
                                     <img src={`http://127.0.0.1:8000/uploads/${movie.image}`} className="img-poster" />
                                 </Col>
                             ))}

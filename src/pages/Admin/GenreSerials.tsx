@@ -14,7 +14,8 @@ export const GenreSerials = () => {
         genreId: "",
         serialsId: "",
         genre_name: "",
-        serial_title: ""
+        serial_title: "",
+        image: ""
     });
     useEffect(() => {
         fetchDirectors();
