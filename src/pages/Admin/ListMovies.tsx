@@ -15,7 +15,8 @@ export const ListMovies = () => {
         age: "",
         year: "",
         country: "",
-        image: null
+        image: null,
+        video: null
     });
 
     const [addingGenre, setAddingGenre] = useState<boolean>(false);
@@ -46,6 +47,7 @@ export const ListMovies = () => {
     };
 
     const handleNewDir = async () => {
+        console.log(addMovie);
         await http
             .post<IMoviesItem>("/movies/store", addMovie, {
                 headers: {
@@ -54,6 +56,7 @@ export const ListMovies = () => {
             });
         fetchDirectors();
         setAddingGenre(false);
+        
     };
 
     const handleDelete = (idD: number) => {
@@ -95,6 +98,15 @@ export const ListMovies = () => {
             ...prevState,
             image: file
         }));
+    };
+
+    const handleVideoChange = (e: any) => {
+        const file = e.target.files[0];
+        addMovies(prevState => ({
+            ...prevState,
+            video: file
+        }));
+        
     };
 
     const handleAddGenre = () => {
@@ -163,6 +175,7 @@ export const ListMovies = () => {
                                 <th scope="col">Year</th>
                                 <th scope="col">Country</th>
                                 <th scope="col">Image</th>
+                                <th scope="col">Video</th>
                                 <th scope="col">&nbsp;</th>
                             </tr>
                         </thead>
@@ -277,6 +290,9 @@ export const ListMovies = () => {
                                     </td>
                                     <td>
                                         <input type="file" name='image' onChange={(e) => handleImageChange(e)} className="form-control" placeholder="Choose file" />
+                                    </td>
+                                    <td>
+                                        <input type="file" name='video' onChange={(e) => handleVideoChange(e)} className="form-control" placeholder="Choose file" />
                                     </td>
                                     <td>
                                         <button onClick={handleNewDir} className="btn btn-success"><i className="bi bi-check"></i></button>

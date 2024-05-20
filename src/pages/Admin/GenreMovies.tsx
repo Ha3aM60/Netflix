@@ -15,7 +15,7 @@ export const GenreMovies = () => {
         moviesId: "",
         genre_name: "",
         movie_title: "",
-        image: ""
+        image: "",
     });
     useEffect(() => {
         fetchDirectors();
